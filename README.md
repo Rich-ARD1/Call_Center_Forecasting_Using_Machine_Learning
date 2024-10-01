@@ -1,18 +1,22 @@
 **Forecasting with Prophet README**
+
 This repository contains a Python script for forecasting call volumes using Facebook's Prophet library, utilizing historical call data stored in a Snowflake database.
 The script performs data preprocessing, outlier handling, holiday adjustment, and forecasting to generate accurate predictions for future call volumes.
 
 **Prerequisites**
+
 Python 3.x
 Required Python libraries: pyodbc, pandas, holidays, numpy, prophet
 
 **Setup**
+
 Install the required Python libraries using pip:
 
 pip install pyodbc pandas holidays numpy prophet
 Ensure access to a Snowflake database with historical call data.
 
 **Usage**
+
 Update the Snowflake DSN (Data Source Name) in the script with your Snowflake configuration:
 
 dsn_name = "mysnowflake"
@@ -22,6 +26,7 @@ python forecast_calls.py
 After execution, the forecast results will be saved to a CSV file named forecast_results.csv.
 
 **Script Overview**
+
 Establish Database Connection: Connect to the Snowflake database to retrieve historical call data.
 
 Retrieve Historical Data: Fetch historical call data from the database and preprocess it for analysis.
@@ -48,12 +53,14 @@ Export Forecast Results: Save the forecast results to a CSV file for further ana
 
 
 **Customization**
+
 Adjust the forecast period and frequency by modifying the periods and freq parameters in the make_future_dataframe function.
 
 Define specific adjustments for holidays and dates in the script as needed.
 
 
 **Note**
+
 Ensure that the Snowflake database connection details are correctly configured before running the script.
 
 Review and customize the holiday adjustment factors and date adjustments according to your specific requirements.
